@@ -15,3 +15,5 @@ RUN apt update && apt install -y \
     libxtst6 \
     xauth \
     xvfb
+
+RUN npm -g install wait-on --unsafe-perm
