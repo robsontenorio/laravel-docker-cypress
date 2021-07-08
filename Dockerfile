@@ -31,7 +31,8 @@ RUN apt update && apt install -y \
     libappindicator3-1 \ 
     xdg-utils \ 
     mplayer \ 
-    apt-utils
+    apt-utils \
+    wget
 
 # Chrome
 RUN wget -O /usr/src/google-chrome-stable_current_amd64.deb "http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}-1_amd64.deb" && \
@@ -40,7 +41,7 @@ RUN wget -O /usr/src/google-chrome-stable_current_amd64.deb "http://dl.google.co
     rm -f /usr/src/google-chrome-stable_current_amd64.deb
 
 # Firefox
-RUN wget --no-verbose -O /tmp/firefox.tar.bz2 https://download-installer.cdn.mozilla.net/pub/firefox/releases/$FIREFOX_VERSION/linux-x86_64/en-US/firefox-$FIREFOX_VERSION.tar.bz2 \
+RUN wget --no-verbose -O /tmp/firefox.tar.bz2 "https://download-installer.cdn.mozilla.net/pub/firefox/releases/$FIREFOX_VERSION/linux-x86_64/en-US/firefox-$FIREFOX_VERSION.tar.bz2" \
     && tar -C /opt -xjf /tmp/firefox.tar.bz2 \
     && rm /tmp/firefox.tar.bz2 \
     && ln -fs /opt/firefox/firefox /usr/bin/firefox
