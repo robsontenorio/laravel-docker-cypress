@@ -9,7 +9,7 @@ ENV npm_config_loglevel warn
 ENV npm_config_unsafe_perm true
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
 ENV CHROME_VERSION 90.0.4430.212
-ARG FIREFOX_VERSION=88.0.1
+ENV FIREFOX_VERSION 88.0.1
 ENV CI=1
 ENV CYPRESS_CACHE_FOLDER=/root/.cache/Cypress
 
