@@ -1,18 +1,11 @@
 # Laravel Cypress Docker
 
-This image inherits from `robsontenorio/laravel` by including all required dependencies and browsers for running Cypress:
+This image inherits from [robsontenorio/laravel](https://github.com/robsontenorio/laravel-docker) by including all required dependencies and browsers for running Cypress:
  - Firefox
  - Chrome
  - Electron
 
- **INTENDED ONLY** for running Cypress e2e tests on Gitlab. It is a large image.
-
-**DO NOT USE IT FOR** :
- - Local development
- - Building production image
-
-
-For production use `robsontenorio/laravel` instead.
+ **INTENDED ONLY** for running Cypress tests on CI. For local development and production use [robsontenorio/laravel](https://github.com/robsontenorio/laravel-docker) instead.
 
 
 ## Gitlab example
@@ -45,7 +38,7 @@ phpunit:
 
 # E2E tests 
 cypress:
-  image: robsontenorio/laravel-cypress # <--- This image include Cypress dependencies
+  image: robsontenorio/laravel-cypress # <--- This image includes Cypress dependencies
   stage: test
   dependencies:
     - composer
