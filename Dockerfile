@@ -45,6 +45,3 @@ RUN wget --no-verbose -O /tmp/firefox.tar.bz2 "https://download-installer.cdn.mo
     && tar -C /opt -xjf /tmp/firefox.tar.bz2 \
     && rm /tmp/firefox.tar.bz2 \
     && ln -fs /opt/firefox/firefox /usr/bin/firefox
-
-# Cypress & Utils
-RUN npm -g install wait-on cypress
