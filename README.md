@@ -1,13 +1,13 @@
-# Laravel Cypress Docker (Gitlab)
+# Laravel Cypress Docker
 
 This image inherits from `robsontenorio/laravel` by including all required dependencies and browsers for running Cypress:
  - Firefox
  - Chrome
  - Electron
 
-This is a large docker image **intended only** for running Cypress e2e tests on Gitlab. 
+ **INTENDED ONLY** for running Cypress e2e tests on Gitlab. It is a large image.
 
-**DO NOT** use for it:
+**DO NOT USE IT FOR** :
  - Local development
  - Building production image
 
@@ -25,14 +25,17 @@ stages:
   - test
   - deploy
 
+# Install PHP dependencies
 composer:  
   stage: build
   ...
 
+# Install JS dependencies
 yarn:  
   stage: build  
   ...
 
+# PHP tests
 phpunit:  
   stage: test
   dependencies:
@@ -40,6 +43,7 @@ phpunit:
     - yarn    
   ...
 
+# E2E tests 
 cypress:
   image: robsontenorio/laravel-cypress # <--- This image include Cypress dependencies
   stage: test
@@ -47,7 +51,7 @@ cypress:
     - composer
     - yarn    
   services:
-    - name: mysql/mysql-server:8.0.25
+    - name: mysql:8.0.25
     - name: redis:6.2.4
   variables:        
     MYSQL_DATABASE: mydb
@@ -72,8 +76,14 @@ cypress:
     paths:      
       - cypress/screenshots/**/*.png
 
-# Build a final docker image and deploy
+# Build production final docker image and deploy it (optional)
 production:
    stage: deploy
-  ...   
+   image: docker:latest
+   only:
+    - tags
+   script:
+    - docker login <...>
+    - docker build <...>
+    - docker push <to some registry>
 ```
