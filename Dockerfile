@@ -1,7 +1,7 @@
 FROM robsontenorio/laravel
 
 LABEL maintainer="Robson Tenório"
-LABEL site="http://github.com/robsontenorio"
+LABEL site="https://github.com/robsontenorio/laravel-docker-cypress"
 
 ENV DEBIAN_FRONTEND=noninteractive 
 ENV TERM xterm 
