@@ -1,4 +1,4 @@
-FROM robsontenorio/laravel
+FROM robsontenorio/laravel:1.0
 
 LABEL maintainer="Robson Tenório"
 LABEL site="https://github.com/robsontenorio/laravel-docker-cypress"
