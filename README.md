@@ -1,4 +1,13 @@
-# Laravel Cypress Docker
+<p align="center">
+  <img src="octopus.png"> <img height="50" src="cypress.png">
+</p> 
+<p align="center">    
+  <img src="https://img.shields.io/docker/v/robsontenorio/laravel-cypress?color=green&style=for-the-badge" />
+  <img src="https://img.shields.io/docker/pulls/robsontenorio/laravel-cypress?color=orange&style=for-the-badge" />
+  <img src="https://img.shields.io/docker/image-size/robsontenorio/laravel-cypress?sort=date&style=for-the-badge" />
+</p>
+
+# Laravel Docker + Cypress
 
 This image inherits from [robsontenorio/laravel](https://github.com/robsontenorio/laravel-docker) by including all required dependencies and browsers for running Cypress:
  - Firefox
