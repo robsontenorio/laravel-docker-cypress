@@ -2,7 +2,7 @@
   <img src="octopus.png"> <img height="50" src="cypress.png">
 </p> 
 <p align="center">    
-  <img src="https://img.shields.io/docker/v/robsontenorio/laravel-cypress?color=green&style=for-the-badge" />
+  <img src="https://img.shields.io/docker/v/robsontenorio/laravel-cypress?color=green&sort=semver&style=for-the-badge" />
   <img src="https://img.shields.io/docker/pulls/robsontenorio/laravel-cypress?color=orange&style=for-the-badge" />
   <img src="https://img.shields.io/docker/image-size/robsontenorio/laravel-cypress?sort=date&style=for-the-badge" />
 </p>
