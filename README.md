@@ -2,9 +2,11 @@
   <img src="https://raw.githubusercontent.com/robsontenorio/laravel-docker/master/octopus.png"> <img height="50" src="https://raw.githubusercontent.com/robsontenorio/laravel-docker-cypress/master/cypress.png">
 </p> 
 <p align="center">    
-  <img src="https://img.shields.io/docker/v/robsontenorio/laravel-cypress?color=green&sort=semver&style=for-the-badge" />
-  <img src="https://img.shields.io/docker/pulls/robsontenorio/laravel-cypress?color=orange&style=for-the-badge" />
-  <img src="https://img.shields.io/docker/image-size/robsontenorio/laravel-cypress?sort=date&style=for-the-badge" />
+  <a href="https://hub.docker.com/r/robsontenorio/laravel-cypress">
+    <img src="https://img.shields.io/docker/v/robsontenorio/laravel-cypress?color=green&sort=semver&style=for-the-badge" />   
+    <img src="https://img.shields.io/docker/pulls/robsontenorio/laravel-cypress?color=orange&style=for-the-badge" />
+   <img src="https://img.shields.io/docker/image-size/robsontenorio/laravel-cypress?sort=date&style=for-the-badge" />
+  </a>
 </p>
 
 # Laravel Docker + Cypress
@@ -14,7 +16,7 @@ This image inherits from [robsontenorio/laravel](https://github.com/robsontenori
  - Chrome
  - Electron
 
- **INTENDED ONLY** for running Cypress tests on CI. For local development and production use [robsontenorio/laravel](https://github.com/robsontenorio/laravel-docker) instead.
+**INTENDED ONLY** for running Cypress tests on CI. For local development and production use [robsontenorio/laravel](https://github.com/robsontenorio/laravel-docker) instead.
 
 
 ## Gitlab example
